@@ -20,13 +20,11 @@ export default function Header() {
   const [isSticky, setIsSticky] = useState(false);
 
   const menuItems = [
-    { id: "#buynow", label: "Buy Now" },
+    { id: "#works", label: "How its works" },
+    { id: "#roadmap", label: "Roadmap" },
+    { id: "#community", label: "Community" },
     { id: "#about", label: "About" },
-    { id: "#services", label: "Services" },
-    { id: "/pdf/whitepaper.pdf", label: "Whitepaper", newTab: true },
-    { id: "#team", label: "Team" },
-    { id: "#support", label: "Support" },
-    { id: "#socials", label: "Socials" },
+    { id: "#faq", label: "FAQ" },
   ];
 
   const router = useRouter();
@@ -46,7 +44,7 @@ export default function Header() {
 
   return (
     <div
-      className={`bg-transparent flex flex-col w-full ${isSticky ? "fixed z-[10] transition" : ""
+      className={`bg-[#0E121B] flex flex-col w-full ${isSticky ? "fixed z-[10] transition" : ""
         }`}
     >
       <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
@@ -55,7 +53,7 @@ export default function Header() {
       <Navbar
         onMenuOpenChange={setIsMenuOpen}
         isMenuOpen={isMenuOpen}
-        className="bg-transparent py-1 px-8 max-lg:px-0 max-sm:px-2 z-0 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
+        className="bg-[#0E121B] border-b-1.5 border-gray-800 py-1 px-8 max-lg:px-0 max-sm:px-2 z-0 max-sm:pl-0 flex justify-between [&>header]:!max-w-full"
       >
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -68,15 +66,15 @@ export default function Header() {
           }}
         >
           <Logo />
-          <p className="font-semibold text-4xl max-sm:text-xl max-md:text-3xl text-inherit ">
-            Psychoin
+          <p className="font-semibold text-3xl max-sm:text-xl max-md:text-3xl text-inherit ">
+            Krypto Castle
           </p>
         </NavbarBrand>
         <NavbarContent className="md:hidden hidden lg:flex gap-4" justify="center">
           {menuItems.map((item) => (
             <NavbarItem key={item.id}>
               <div className="text-base font-semibold text-[#CDCDCD] hover:text-white cursor-pointer">
-                <a href={`${item.id}`} target={item.newTab ? "_blank" : "_self"} >{item.label}</a>
+                <a href={`${item.id}`} >{item.label}</a>
               </div>
             </NavbarItem>
           ))}
@@ -85,14 +83,9 @@ export default function Header() {
           <NavbarItem>
             <Button
               onClick={() => open()}
-              className="font-semibold -mr-4 flex text-white rounded-[100px] px-8 max-sm:px-4 max-sm:py-2 py-6 text-base"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgba(145, 173, 186, 0.8) -11.36%, rgba(32, 81, 102, 0.096) 104.55%)",
-                border: "1px solid #FFFFFF",
-              }}
+              className="font-semibold bg-[#222530] flex text-white rounded-lg px-6 max-sm:px-4 max-sm:py-2 py-2 text-base"
             >
-              {isConnected ? "Connected" : "Connect"}
+              {isConnected ? "Connected" : "Connect Wallet"}
             </Button>
           </NavbarItem>
         </NavbarContent>
@@ -105,7 +98,7 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                     className="text-xl font-semibold text-[#CDCDCD] mb-6 hover:text-white cursor-pointer"
                   >
-                    <a href={`${item.id}`} target={item.newTab ? "_blank" : "_self"}>{item.label}</a>
+                    <a href={`${item.id}`} >{item.label}</a>
                   </div>
                 </div>
               </NavbarMenuItem>
@@ -113,13 +106,6 @@ export default function Header() {
           </NavbarMenu>
         )}
       </Navbar>
-      <Image
-        src={"/img/Line 2.png"}
-        alt="line"
-        width={0}
-        height={0}
-        className="w-full h-[1px]"
-      />
       </div>
       </div>
     </div>
