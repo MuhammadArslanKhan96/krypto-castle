@@ -6,7 +6,6 @@ import SlidingText from "../components/sections/Investors";
 
 export default function Banner() {
   return (
-    <div>
     <div className="bg-[#2626267d] w-90">
       <div 
         style={{
@@ -111,7 +110,6 @@ export default function Banner() {
         <SlidingText />
         </div>
       </div>
-    </div>
     </div>
   );
 }
