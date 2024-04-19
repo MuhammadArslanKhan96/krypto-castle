@@ -19,11 +19,11 @@ export default function Banner() {
          style={{
           backgroundRepeat: "no-repeat",
           background:
-            "radial-gradient(circle, rgba(125,82,244,0.6672794117647058) 3%, rgba(255,255,255,0) 41%)",
+            "radial-gradient(circle, rgb(125 82 244 / 20%) 3%, rgba(255, 255, 255, 0) 41%)",
         }}>
 
         <div
-          className="flex px-20 py-16 max-md:px-8 items-center max-md:justify-center justify-between gap-10"
+          className="flex px-20  py-16 max-md:px-8 items-center max-md:justify-center justify-between gap-10"
         >
           <div className="flex flex-col gap-2 w-full">
             <h3 className="text-[56px] font-semibold md:w-[550px] text-white leading-[64px] max-md:text-[32px] max-lg:text-[32px] max-sm:text-[28px] max-md:leading-10 max-sm:leading-10">
