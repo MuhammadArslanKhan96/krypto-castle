@@ -6,6 +6,7 @@ import SlidingText from "../components/sections/Investors";
 
 export default function Banner() {
   return (
+    <div>
     <div className="bg-[#2626267d] w-90">
       <div 
         style={{
@@ -35,14 +36,6 @@ export default function Banner() {
               even in environments where constant internet connectivity isn't
               guaranteed.
             </p>
-            <div className="flex gap-4 mt-4">
-              <Link
-                href=""
-                className="text-[#99A0AE] text-base cursor-pointer border-b-1 border-[#99A0AE]"
-              >
-                Learn more
-              </Link>
-            </div>
           </div>
           <div className="w-full flex flex-col justify-center rounded-xl bg-[#ffffff12] px-10 py-4 gap-4">
             <h4 className="text-[24px] text-white">Token Swap</h4>
@@ -118,6 +111,7 @@ export default function Banner() {
         <SlidingText />
         </div>
       </div>
+    </div>
     </div>
   );
 }
