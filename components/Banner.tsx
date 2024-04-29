@@ -23,7 +23,7 @@ export default function Banner() {
         }}>
 
         <div
-          className="flex px-20  py-16 max-md:px-8 items-center max-md:justify-center justify-between gap-10"
+          className="flex px-20  py-36 max-md:px-8 items-center max-md:justify-center justify-between gap-10"
         >
           <div className="flex flex-col gap-2 w-full">
             <h3 className="text-[56px] font-semibold md:w-[550px] text-white leading-[64px] max-md:text-[32px] max-lg:text-[32px] max-sm:text-[28px] max-md:leading-10 max-sm:leading-10">

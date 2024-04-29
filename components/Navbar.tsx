@@ -44,7 +44,7 @@ export default function Header() {
 
   return (
     <div
-      className={`bg-[#0E121B] flex flex-col w-full ${isSticky ? "fixed z-[10] transition" : ""
+      className={`bg-[#0E121B] flex flex-col w-full ${isSticky ? "fixed z-[10] transition" : "fixed"
         }`}
     >
       <div className="4xl1:flex 4xl1:justify-center 4xl1:items-center">
